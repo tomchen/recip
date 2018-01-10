@@ -1,0 +1,216 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#menu {
+	display: block;
+	height: 30px;
+	border-bottom: 1px solid #000;
+	position: relative;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#menu li {
+	float: left;
+	display: inline-block;
+	width: 130px;
+	height: 30px;
+}
+
+#menu li a {
+	display: inline-block;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+}
+
+#menu li a:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#menu ul.submenu {
+	display: block;
+	width: 100vw;
+	height: 96px;
+	position: absolute;
+	left: 0;
+	border-bottom: 1px solid #000;
+	visibility: hidden;
+}
+
+#menu ul.submenu.current-menu {
+	visibility: visible;
+}
+
+#menu ul.submenu li, #menu ul.submenu a {
+	height: 30px;
+}
+
+#menu ul.submenu a {
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	padding-top: 66px;
+}
+
+.current-topmenubtn {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slide {
+	margin-top: 96px;
+	width: calc(100vw - 230px);
+	height: calc(100vh - 96px);
+}
+
+.slides {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#slides-outlineview {
+    margin-top: 96px;
+    position: absolute;
+    right: 0;
+    width: 230px;
+    font-size: 12px !important;
+    border-left: 1px solid #000;
+    overflow-y: scroll;
+	height: calc(100vh - 96px);
+}
+
+#slides-outlineview section {
+    border-bottom: 1px solid #000;
+    height: 100px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#slides-outlineview section h1, h2 {
+    font-weight: bold;
+}
+
+#slides-outlineview section.current-slide {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slides-outlineview section img {
+	max-width: 16px;
+	max-height: 16px;
+}
+
+.slides section.current-slide {
+	display: block !important;
+}
+
+#dialog-box {
+	position: absolute;
+	height: 300px;
+	width: 500px;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: calc(50vh - 300px / 2);
+	left: calc(50vw - 500px / 2);
+	z-index: 9999;
+	padding: 25px;
+	color: #FFF;
+	display: none;
+	text-align: center;
+}
+
+#dialog-box-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 300px;
+}
+
+#dialog-box br {
+   display: block;
+   margin: 10px 0;
+   content: " ";
+}
+
+#dialog-box.dialog-box-open {
+	display: block;
+}
+
+.dialog-btn {
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+	margin: 20px;
+	background-color: #AAA;
+}
+
+.dialog-btn:hover {
+	background-color: #EEE;
+}
+
+#dialog-btn-bar {
+	text-align: center;
+}
+
+#file-path, #select-file {
+	margin: 0 4px;
+}
+
+#file-path, #select-title, #select-filename {
+	width: 23em;
+}
+
+#menu, #slides-outlineview, ul.submenu {
+	background-color: #F5F5DC !important;
+}
+
+.table-width {
+	width: 3em;
+}

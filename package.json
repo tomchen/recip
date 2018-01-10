@@ -1,0 +1,21 @@
+{
+  "name": "recip",
+  "version": "1.0.0",
+  "description": "An HTML5 presentation editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/",
+  "keywords": [
+    "Recip",
+    "editor",
+    "presentation",
+    "HTML"
+  ],
+  "author": "Tom Chen",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}

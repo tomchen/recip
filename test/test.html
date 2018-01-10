@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>QUnit Test for Recip Editor</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../recip-editor/css/style.css">
+		<link rel="stylesheet" href="../recip-editor/reveal/css/reveal.css">
+		<link rel="stylesheet" href="../recip-editor/reveal/css/theme/beige.css" id="theme-css">
+		<link rel="stylesheet" href="qunit-2.4.1.css">
+		<style>
+		#menu, #slides-outlineview, #dialog-box, #slide {
+			display: none;
+		}
+		html, body {
+			background: #FFF;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="qunit"></div>
+  		<div id="qunit-fixture"></div>
+		<ul id="menu">
+			<li><a class="topmenubtn" href="#">File</a>
+				<ul class="submenu">
+					<li><a href="#" id="open-file">Open file</a></li>
+					<li><a href="#" id="save-file">Save file</a></li>
+					<li><a href="#" id="file-title">File title</a></li>
+					<li><a href="#" id="new-file">New file</a></li>
+				</ul>
+			</li>
+			<li><a class="topmenubtn add-el" href="#">Add</a>
+				<ul class="submenu">
+					<li><a href="#" id="add-text">Text</a></li>
+					<li><a href="#" id="add-image">Image</a></li>
+					<li><a href="#" id="add-table">Table</a></li>
+					<li><a href="#" id="add-h1" title="Add first-level title">Title</a></li>
+					<li><a href="#" id="add-h2" title="Add second-level title">2nd LVL title</a></li>
+					<li><a href="#" id="delete-last">Delete last</a></li>
+				</ul>
+			</li>
+			<li><a class="topmenubtn" href="#">Slide</a>
+				<ul class="submenu">
+					<li><a href="#" id="new-title">New title slide</a></li>
+					<li><a href="#" id="new-content">New content slide</a></li>
+					<li><a href="#" id="delete-slide">Delete current</a></li>
+					<li><a href="#" id="current-slide-order">Change order</a></li>
+					<li><a href="#" id="edit-html">Edit HTML</a></li>
+				</ul></li>
+			<li><a class="topmenubtn" href="#">Theme</a>
+				<ul class="submenu">
+					<li><a href="#" id="change-theme">Choose a theme</a></li>
+					<li><a href="#" id="choose-transition">Transition</a></li>
+					<li><a href="#" id="global-script">Global script</a></li>
+					<li><a href="#" id="global-style">Global style</a></li>
+				</ul></li>
+			<li><a class="topmenubtn" href="#">Current selected</a>
+				<ul class="submenu">
+					<li><a href="#" id="edit-style">Edit style</a></li>
+					<li><a href="#" id="delete-element">Delete element</a></li>
+				</ul></li>
+		</ul>
+		<div id="slides-outlineview">
+		</div>
+		<div id="dialog-box">
+			<div id="dialog-box-wrapper">
+				<div id="dialog-text">
+				</div>
+				<div id="dialog-btn-bar">
+				</div>
+			</div>
+		</div>
+	<div id="slide">
+		<div class="reveal">
+			<div class="slides" contenteditable="true" data-transition="convex" data-title="Recip Example">
+
+				<section>
+					<h1>Recip Example</h1>
+					<ul>
+						<li>Authors : John Doe, Jane Doe</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Our mission</h2>
+					<ul>
+						<li>To make the presentation a very comfortable thing.</li>
+						<li>No more difficulties in showing the charts and interacting with audience.</li>
+						<li>Free and open source, designed for everyone.</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul>
+						<li>Logo (see the above picture)</li>
+						<li>The file in “.recip.html” format is actually a simple web page file, which means you can execute it in any operating system with a browser.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Thank you for your attention!</h2>
+				</section>
+
+				<script id="custom-script"></script>
+
+				<style id="custom-style" type="text/css"></style>
+
+			</div>
+		</div>
+	</div>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+	<script src="../recip-editor/js/jquery-3.2.1.min.js"></script>
+	<script src="../recip-editor/js/script.js"></script>
+	<script>if (window.module) module = window.module;</script>
+	<script src="qunit-2.4.1.js"></script>
+	<script src="tests.js"></script>
+	</body>
+</html>
