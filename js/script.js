@@ -140,6 +140,22 @@ $("#save-file").click(function(e){
 			Reveal.initialize({
 				transition: "` + $(".slides").data("transition") + `"
 			});
+
+			var socket  = new WebSocket("` + $(".slides").data("server") + `");
+
+			socket.onopen = function(e) {
+				window.addEventListener('beforeunload', function(e) {
+					WebSocket.close();
+				});
+			};
+
+			socket.onmessage = function(e) {
+				if (e.data === '1') {
+					Reveal.right();
+				} else if (e.data === '-1') {
+					Reveal.left();
+				}
+			}
 		</script>
 	</body>
 </html>`;
@@ -171,8 +187,11 @@ $("#new-file").click(function(e){
 		updateSlidesOutlineview();
 });
 
-
-
+$("#set-server").click(function(e){
+	openDialogBox("Set server URL: <input type='text' id='set-server-input' value='"+$(".slides").data("server")+"'>", function(e){
+		$(".slides").data("server", $("#set-server-input").val());
+	});
+});
 
 /* ===== Add ===== */
 
